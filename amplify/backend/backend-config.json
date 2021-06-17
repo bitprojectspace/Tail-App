@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "crewdemoe7ad802d": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
