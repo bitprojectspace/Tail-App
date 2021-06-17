@@ -10,7 +10,7 @@ export default class Search extends Component {
                     <div className="row">
                         <div className="col s12">
                             <div className="input-field">
-                                <input className="white grey-text autocomplete" placeholder="Search for job, constactor, etc" type="text" id="autocomplete-input" />
+                                <input className="white grey-text autocomplete" placeholder="Search for job, contractor, etc" type="text" id="autocomplete-input" />
                             </div> 
                         </div>
                     </div>

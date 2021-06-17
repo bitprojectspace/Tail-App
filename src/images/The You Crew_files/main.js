@@ -2201,7 +2201,7 @@ class Search extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
               className: "input-field",
               children: /*#__PURE__*/Object(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__["jsxDEV"])("input", {
                 className: "white grey-text autocomplete",
-                placeholder: "Search for job, constactor, etc",
+                placeholder: "Search for job, contractor, etc",
                 type: "text",
                 id: "autocomplete-input"
               }, void 0, false, {

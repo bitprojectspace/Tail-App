@@ -15,10 +15,10 @@ const SmoothScroll = () => {
                 <nav className="purple">
                     <div className="container">
                         <div className="nav-wrapper">
-                            <AnchorLink href="!#" className="brand-logo">TheYouCrew</AnchorLink>
-                            <AnchorLink href="!#" data-target="mobile-demo" className="sidenav-trigger">
+                            <Link to="/" className="brand-logo">TheYouCrew</Link>
+                            <Link to="/" data-target="mobile-demo" className="sidenav-trigger">
                                 <span class="material-icons">menu</span>
-                            </AnchorLink>
+                            </Link>
                             <ul className="right hide-on-med-and-down">
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/CustProfile">Customer Profile</Link></li>
@@ -39,15 +39,6 @@ const SmoothScroll = () => {
                 <li><Link to="/">Sign Up</Link></li>
                 <li><Link to="/">Contact</Link></li>
             </ul>
-            {/* <ul class="sidenav" id="mobile-demo">
-                <li><AnchorLink href="#Home">Home</AnchorLink></li>
-                <li><AnchorLink href="#Search">Search</AnchorLink></li>
-                <li><AnchorLink href="#Explorer">Explorer</AnchorLink></li>
-                <li><AnchorLink href="#Adventure">Adventure</AnchorLink></li>
-                <li><AnchorLink href="#Gallery">Gallery</AnchorLink></li>
-                <li><AnchorLink href="#Contact">Contact</AnchorLink></li>
-
-            </ul> */}
         </section>
     )
 }
