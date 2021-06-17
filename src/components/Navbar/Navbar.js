@@ -20,24 +20,24 @@ const SmoothScroll = () => {
                                 <span class="material-icons">menu</span>
                             </AnchorLink>
                             <ul className="right hide-on-med-and-down">
-                                <li><AnchorLink href="#Home">Home</AnchorLink></li>
-                                <li><AnchorLink href="#Search">Contractor</AnchorLink></li>
-                                <li><AnchorLink href="#Explorer">Jobs</AnchorLink></li>
-                                <li><AnchorLink href="#Adventure">Sign In</AnchorLink></li>
-                                <li><AnchorLink href="#Gallery">Sign Up</AnchorLink></li>
-                                <li><AnchorLink href="#Contact">Contact</AnchorLink></li>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/CustProfile">Customer Profile</Link></li>
+                                <li><Link to="/">Jobs</Link></li>
+                                <li><Link to="/">Sign In</Link></li>
+                                <li><Link to="/">Sign Up</Link></li>
+                                <li><Link to="/">Contact</Link></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </div>
             <ul class="sidenav" id="mobile-demo">
-                <li><AnchorLink href="#Home">Home</AnchorLink></li>
-                <li><AnchorLink href="#Search">Contractor</AnchorLink></li>
-                <li><AnchorLink href="#Explorer">Jobs</AnchorLink></li>
-                <li><AnchorLink href="#Adventure">Sign In</AnchorLink></li>
-                <li><AnchorLink href="#Gallery">Sign Up</AnchorLink></li>
-                <li><AnchorLink href="#Contact">Contact</AnchorLink></li>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/CustProfile">Customer Profile</Link></li>
+                <li><Link to="/">Jobs</Link></li>
+                <li><Link to="/">Sign In</Link></li>
+                <li><Link to="/">Sign Up</Link></li>
+                <li><Link to="/">Contact</Link></li>
             </ul>
             {/* <ul class="sidenav" id="mobile-demo">
                 <li><AnchorLink href="#Home">Home</AnchorLink></li>

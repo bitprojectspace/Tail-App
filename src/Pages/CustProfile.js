@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar/Navbar'
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';
@@ -7,10 +8,11 @@ import React from 'react';
 export default function CustProfile() {
 return (
 //Wrapper Thing.
-<div className="space-y-6 w-1/2">
+<div className="space-y-6 w-full">
   {
   //Personal Information
   }
+  <Navbar />
   <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
     <div className="md:grid md:grid-cols-3 md:gap-6">
       <div className="md:col-span-1">
