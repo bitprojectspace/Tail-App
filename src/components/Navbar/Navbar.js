@@ -4,7 +4,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'react-router-dom';
 import App from '../../App';
 import { extend } from 'jquery';
-import Home from '../Home/Home';
 import Contact from '../Contact/Contact';
 
 

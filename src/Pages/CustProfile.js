@@ -1,5 +1,5 @@
 import React from 'react';
-import History from '../components/History';
+//import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';
 //import awsconfig from './aws-exports';
@@ -192,7 +192,9 @@ return (
             </button>
           </div>
         </form>
-        <History />
+        {
+            // <History />
+        }
       </div>
     </div>
   </div>
