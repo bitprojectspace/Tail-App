@@ -21,9 +21,6 @@ Amplify.configure(awsconfig);
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <AmplifySignOut />
-      </header>
     <Route>
       <Fragment>
         <Navbar />
@@ -40,3 +37,11 @@ function App() {
 }
 
 export default withAuthenticator(App);
+
+{
+  /**
+   * <header className="App-header">
+   *  <AmplifySignOut />
+   * </header>
+   */
+}
