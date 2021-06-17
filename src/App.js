@@ -14,7 +14,7 @@ import { Route, Link } from 'react-router-dom';
 //Imports for Amplify sign in and out.
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
-import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
+import {AmplifySignOut, withAuthenticator, AmplifySignIn} from '@aws-amplify/ui-react';
 
 Amplify.configure(awsconfig);
 
@@ -42,6 +42,7 @@ export default withAuthenticator(App);
   /**
    * <header className="App-header">
    *  <AmplifySignOut />
+   *  <AmplifySignIn />
    * </header>
    */
 }
