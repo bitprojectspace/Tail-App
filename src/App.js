@@ -3,6 +3,7 @@ import '../src/App.css'
 // import { BrowserRouter as Router} from 'react-router-dom';
 import Home from './Pages/Home';
 import CustProfile from './Pages/CustProfile';
+import ContractorProfile from './Pages/ContractorProfile';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //Imports for Amplify sign in and out.
@@ -25,6 +26,11 @@ function App() {
         <Route exact path="/CustProfile">
           <CustProfile />
         </Route>
+
+        <Route exact path="/ContractorProfile">
+          <ContractorProfile/>
+        </Route>
+        
       </Switch>
     </Router>
     </div>
