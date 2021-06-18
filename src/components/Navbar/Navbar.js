@@ -23,10 +23,15 @@ const SmoothScroll = () => {
                                 <li><Link to="/">Home</Link></li>
                                 <li><Link to="/CustProfile">Customer Profile</Link></li>
                                 <li><Link to="/ContractorProfile">Contractor Profile</Link></li>
-                                <li><Link to="/">Jobs</Link></li>
                                 <li><Link to="/">Sign In</Link></li>
-                                <li><Link to="/">Sign Up</Link></li>
-                                <li><Link to="/">Contact</Link></li>
+                                {
+                                    /**
+                                     *  <li><Link to="/">Sign Up</Link></li>
+                                     *  <li><Link to="/">Jobs</Link></li>
+                                     *  <li><Link to="/">Contact</Link></li>
+                                     */
+                                }
+                                
                             </ul>
                         </div>
                     </div>
