@@ -21,6 +21,7 @@ const SmoothScroll = () => {
                             </Link>
                             <ul className="right hide-on-med-and-down">
                                 <li><Link to="/">Home</Link></li>
+                                <li><Link to="/Help">Help</Link></li>
                                 <li><Link to="/CustProfile">Customer Profile</Link></li>
                                 <li><Link to="/ContractorProfile">Contractor Profile</Link></li>
                                 <li><Link to="/">Sign In</Link></li>
