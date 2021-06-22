@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import electric from '../../images/electric-repair.jpg';
 import patio from '../../images/patio-repair.jpg';
 import plumber from '../../images/plumber-repair.jpg';
-import carpenter from '../../images/carpenter-repair.jpg';
+//import carpenter from '../../images/carpenter-repair.jpg';
 import {HashLink as Link } from 'react-router-hash-link';
 
 export default class Adventure extends Component {

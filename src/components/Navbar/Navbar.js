@@ -4,11 +4,11 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import React, { Component } from 'react';
 import '../../../node_modules/materialize-css/dist/css/materialize.css';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+//import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'react-router-dom';
-import App from '../../App';
-import { extend } from 'jquery';
-import Contact from '../Contact/Contact';
+//import App from '../../App';
+//import { extend } from 'jquery';
+//import Contact from '../Contact/Contact';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
