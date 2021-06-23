@@ -7,7 +7,7 @@ module.exports = {
       Gray: '#191b43',
       Softwhite: '#eef1ea',
       white: '#fff'
-    },
+    }
   },
   variants: {
     extend: {},
