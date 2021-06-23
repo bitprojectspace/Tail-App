@@ -23,7 +23,7 @@ export default class Explore extends Component {
                             </Link>
                         </div>
                         <div className="col s12 m6">
-                            <Link to="/PostJobs">
+                            <Link to="/CustProfile">
                             <div className="card-panel">
                             <i class="material-icons medium purple-text">menu_book</i>
                             <h4>Post a Job</h4>

@@ -150,6 +150,83 @@ return (
       }
       <div className="mt-5 md:mt-0 md:col-span-2">
         <form className="space-y-6" action="#" method="POST">
+          {
+            //Job title
+          }
+
+           <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="title" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Job title
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <div className="max-w-lg flex rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    className="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
+                  />
+                </div>
+              </div>
+            </div>
+            </div>
+
+          {
+            //City
+          }
+
+          <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="city" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                City
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+            {
+              //State or Province
+            }
+           <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="state" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                State / Province
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                />
+              </div>
+            </div>
+
+            {
+              //Urgency
+            }
+
+          <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Urgency
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+                <select
+                  id="urgency"
+                  name="urgency"
+                  className="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                >
+                  <option>Urgent</option>
+                  <option>Actively looking</option>
+                  <option>Just Browsing</option>
+                </select>
+              </div>
+            </div>
 
           {
           //About Section
