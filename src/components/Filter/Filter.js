@@ -1,4 +1,5 @@
 import Search from '../Search/Search'
+//Latest Work of Kyle and Hriday.
 export default function Filter(){
     return (
         <section id="search" className="section section-search blue accent-2 white-text center scrollspy">
