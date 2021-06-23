@@ -8,10 +8,12 @@ import JobCard from '../components/JobCard/JobCard';
 export default function BrowseJobs() {
 
     return (
-      <div>
+      <div className="bg-Gray">
         <Navbar />
-        <JobCard />
-        <StackedList />
+        <div className="flex flex-col h-screen my-auto items-center bgimg bg-cover">
+          <JobCard />
+          
+        </div>    
       </div>
       
     )
