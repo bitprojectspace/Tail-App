@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar/Navbar'
 //import Amplify from 'aws-amplify';
 //import awsconfig from './aws-exports';
 
-export default function CustProfile() {
+export default function ContractorProfile() {
 return (
 //Wrapper Thing.
 <div className="space-y-6 w-full">
@@ -68,29 +68,44 @@ return (
             </form>
           </div>
 
+          <div className="col-span-6 sm:col-span-4">
+            <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
+              Company Name
+            </label>
+            <input type="text" name="company_name" id="company_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+          </div>
+          
+          <div>
+              <label htmlFor="des" className="block text-sm font-medium text-gray-700">
+                Company Description
+              </label>
+              <div className="mt-1">
+                <textarea id="des" name="about" rows={5} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Our company specializes in..." defaultValue={''} />
+              </div>
+              <p className="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>
+          </div>
+
+          {
+          //Prototype for qualifications
+          }
+
+          <div>
+              <label htmlFor="qualifications" className="block text-sm font-medium text-gray-700">
+                Qualifications
+              </label>
+              <div className="mt-1">
+                <textarea id="qualifications" name="qualifications" rows={5} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="We are qualified to work on ____ job sites." defaultValue={''} />
+              </div>
+          </div>
           <div className="grid grid-cols-6 gap-6">
-            <div className="col-span-6 sm:col-span-3">
-              <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">
-                First name
-              </label>
-              <input type="text" name="first_name" id="first_name" autoComplete="given-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-            </div>
-
-            <div className="col-span-6 sm:col-span-3">
-              <label htmlFor="last_name" className="block text-sm font-medium text-gray-700">
-                Last name
-              </label>
-              <input type="text" name="last_name" id="last_name" autoComplete="family-name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-            </div>
-
-            <div className="col-span-6 sm:col-span-4">
+            <div className="col-span-6 sm:col-span-6 ">
               <label htmlFor="email_address" className="block text-sm font-medium text-gray-700">
                 Email address
               </label>
               <input type="text" name="email_address" id="email_address" autoComplete="email" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
             </div>
 
-            <div className="col-span-6 sm:col-span-3">
+            <div className="col-span-6 sm:col-span-4">
               <label htmlFor="country" className="block text-sm font-medium text-gray-700">
                 Country / Region
               </label>
@@ -108,7 +123,7 @@ return (
               <input type="text" name="street_address" id="street_address" autoComplete="street-address" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
             </div>
 
-            <div className="col-span-6 sm:col-span-6 lg:col-span-2">
+            <div className="col-span-6 sm:col-span-6 lg:col-span-6">
               <label htmlFor="city" className="block text-sm font-medium text-gray-700">
                 City
               </label>
@@ -137,70 +152,17 @@ return (
   {
   //Profile Section
   }
+  
+  {
+  //Past Jobs
+  }
   <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-    <div className="md:grid md:grid-cols-3 md:gap-6">
+  <div className="md:grid md:grid-cols-3 md:gap-6">
       <div className="md:col-span-1">
-        <h3 className="text-lg font-medium leading-6 text-gray-900">Post A Job!</h3>
-        <p className="mt-1 text-sm text-gray-500">
-          This information will be displayed publicly so be careful what you share.
-        </p>
-      </div>
-      {
-      //The wrapper for the entire Profile sections items
-      }
-      <div className="mt-5 md:mt-0 md:col-span-2">
-        <form className="space-y-6" action="#" method="POST">
-
-          {
-          //About Section
-          }
-          <div>
-            <label htmlFor="des" className="block text-sm font-medium text-gray-700">
-              Description
-            </label>
-            <div className="mt-1">
-              <textarea id="des" name="about" rows={3} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Help, my faucet is leaking..." defaultValue={''} />
-            </div>
-            <p className="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>
-          </div>
-
-          {
-          //The Cover Photo
-          }
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Photo of the Issue</label>
-            <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-              <div className="space-y-1 text-center">
-                <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className="flex text-sm text-gray-600">
-                  <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                    <span>Upload a file</span>
-                    <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                  </label>
-                  <p className="pl-1">or drag and drop</p>
-                </div>
-                <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-end">
-            <button type="button" className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Cancel
-            </button>
-            <button type="submit" className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-              Post
-            </button>
-          </div>
-        </form>
-        {
-            // <History />
-        }
-      </div>
-    </div>
+      <h3 className="text-lg font-medium leading-6 text-gray-900">Past Jobs</h3>
   </div>
-
+  </div>
+  </div>
   {
   //Notifications Section Card.
   }
@@ -217,13 +179,13 @@ return (
             <div className="mt-4 space-y-4">
               <div className="flex items-start">
                 <div className="h-5 flex items-center">
-                  <input id="comments" name="comments" type="checkbox" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" />
+                  <input id="comments" name="comments" type="checkbox" className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded justifyContent: 'center'" />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label htmlFor="comments" className="font-medium text-gray-700">
+                  <label htmlFor="comments" className="font-medium text-gray-700 text-align:center textAlignVertical:center textAlign: center">
                     Comments
                   </label>
-                  <p className="text-gray-500">Get notified when someones posts a comment on a posting.</p>
+                  <p className="text-gray-500 text-align:center;">Get notified when someone posts a comment on a posting.</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -280,7 +242,6 @@ return (
       </div>
     </div>
   </div>
-
   {
   // Button Section
   }
