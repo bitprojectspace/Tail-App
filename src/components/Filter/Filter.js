@@ -2,7 +2,7 @@ import Search from '../Search/Search'
 //Latest Work of Kyle and Hriday.
 export default function Filter(){
     return (
-        <section id="search" className="section section-search blue accent-2 white-text center scrollspy bg-gray">
+        <section id="search" className="section section-search white-text center scrollspy bg-Gray border-b-2 border-pink-400 mb-10">
                 <div className="container">
                     <div className="row">
                         <div className="col s12 inline-flex w-40">
