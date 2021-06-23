@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../../node_modules/materialize-css/dist/css/materialize.min.css';
 import BrowseJobs from '../../Pages/BrowseJobs';
+import PostJobs from '../../Pages/PostJobs';
 import { Link } from 'react-router-dom';
 
 export default class Explore extends Component {
@@ -22,7 +23,7 @@ export default class Explore extends Component {
                             </Link>
                         </div>
                         <div className="col s12 m6">
-                            <Link to="/CustProfile">
+                            <Link to="/PostJobs">
                             <div className="card-panel">
                             <i class="material-icons medium purple-text">menu_book</i>
                             <h4>Post a Job</h4>
