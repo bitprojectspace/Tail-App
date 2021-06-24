@@ -14,6 +14,8 @@ export default function BrowseJobs() {
         <Filter />
         <div className="flex flex-col h-screen items-center">
           <JobCard />
+          <JobCard />
+          <JobCard />
         </div>    
       </div>
       
