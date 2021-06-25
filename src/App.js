@@ -6,6 +6,7 @@ import CustProfile from './Pages/CustProfile';
 import ContractorProfile from './Pages/ContractorProfile';
 import Help from './Pages/Help';
 import BrowseJobs from './Pages/BrowseJobs';
+import MakeQuote from './Pages/MakeQuote';
 //import PostJobs from './Pages/PostJobs';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -40,6 +41,10 @@ function App() {
 
         <Route exact path="/BrowseJobs">
           <BrowseJobs/>
+        </Route>
+
+        <Route exact path="/MakeQuote">
+          <MakeQuote/>
         </Route>
         
       </Switch>
