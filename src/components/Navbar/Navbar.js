@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import '../../../node_modules/materialize-css/dist/css/materialize.css';
 //import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'react-router-dom';
+//import logo from '../../images/theYOUCrewLogo.jpg'
+import TheLogo from '../../images/theYOUCrewLogo.jpg';
 //import App from '../../App';
 //import { extend } from 'jquery';
 //import Contact from '../Contact/Contact';
