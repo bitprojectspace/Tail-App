@@ -6,7 +6,8 @@ module.exports = {
       DarkOrchid: '#9c27b0',
       Gray: '#191b43',
       Softwhite: '#eef1ea',
-      white: '#fff'
+      white: '#fff',
+      yellow: '#ecc94b'
     }
   },
   variants: {
