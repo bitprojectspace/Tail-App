@@ -63,7 +63,7 @@ export default function Example() {
                   <li
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    <Link to="/ContractorProfile">Contractor Profile</Link>
+                    <Link to="/BrowseContractors">Browse Contractors</Link>
                   </li>
                   <li
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
