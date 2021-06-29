@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
+import Rating from '../components/Rating/Rating';
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';
@@ -13,6 +14,7 @@ return (
   //Personal Information
   }
   <Navbar />
+  <Rating />
   <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
     <div className="md:grid md:grid-cols-3 md:gap-6">
       <div className="md:col-span-1">
