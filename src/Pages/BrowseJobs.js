@@ -13,7 +13,7 @@ export default function BrowseJobs() {
       <div className="bg-Gray">
         <Navbar />
         <Filter />
-        <div className="flex flex-col h-screen items-center">
+        <div className="flex flex-col h-full items-center">
           {jobsComponents}
         </div>    
       </div>
@@ -23,18 +23,18 @@ export default function BrowseJobs() {
 
 {
   
-     {
-        /*
-      
-        <div>
-            <Navbar />
-            <StackedList />
-            {
-              //Alternative style. Job Card...
-            }
-            <JobCard />
-        </div>
-        */
-      }
+  {
+     /*
    
+     <div>
+         <Navbar />
+         <StackedList />
+         {
+           //Alternative style. Job Card...
+         }
+         <JobCard />
+     </div>
+     */
+   }
+
 }

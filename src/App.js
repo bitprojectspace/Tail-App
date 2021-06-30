@@ -8,6 +8,7 @@ import Help from './Pages/Help';
 import BrowseJobs from './Pages/BrowseJobs';
 import MakeQuote from './Pages/MakeQuote';
 import BrowseContractors from './Pages/BrowseContractors';
+import JobDisplay from './Pages/JobDisplay';
 //import PostJobs from './Pages/PostJobs';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -50,6 +51,10 @@ function App() {
 
         <Route exact path="/BrowseContractors">
           <BrowseContractors/>
+        </Route>
+
+        <Route exact path="/JobDisplay">
+          <JobDisplay/>
         </Route>
         
       </Switch>
