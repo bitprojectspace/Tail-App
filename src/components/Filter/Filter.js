@@ -7,7 +7,7 @@ export default function Filter(){
                     <div className="row">
                         <div className="col s12 inline-flex w-40">
                             <div className="input-field w-7/12">
-                                <input className="white grey-text autocomplete" placeholder="Search for job, contractor, etc" type="text" id="autocomplete-input" />
+                                <input className="rounded-full" placeholder="Search for job, contractor, etc" type="text" id="autocomplete-input" />
                             </div>
                             {
                                 //div containing all the options

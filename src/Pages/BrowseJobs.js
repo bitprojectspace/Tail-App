@@ -13,7 +13,7 @@ export default function BrowseJobs() {
       <div className="bg-Gray">
         <Navbar />
         <Filter />
-        <div className="flex flex-col h-screen items-center">
+        <div className="flex flex-col h-full items-center">
           {jobsComponents}
         </div>    
       </div>

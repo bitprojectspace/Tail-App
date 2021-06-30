@@ -4,7 +4,7 @@ import dummy from "../../images/1.jpg"
 
 export default function JobCard(props) {
   return (
-    <div className="bg-white shadow overflow-visible sm:rounded-lg w-4/12 mx-0 my-1">
+    <div className="bg-white shadow overflow-visible sm:rounded-lg w-5/12 mx-0 my-1">
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-lg font-bold leading-6 text-gray-900">{props.title}</h3>
       </div>
