@@ -8,7 +8,13 @@ export default function BrowseContractors () {
     return (
         <div className="bg-Gray">
         <Navbar />
-        <div className="flex flex-col h-screen items-center">
+        <div className="flex flex-col h-full items-center">
+          <ContractorCard />
+          <ContractorCard />
+          <ContractorCard />
+          <ContractorCard />
+          <ContractorCard />
+          <ContractorCard />
           <ContractorCard />
           <ContractorCard />
           <ContractorCard />
