@@ -1,6 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { PaperClipIcon } from '@heroicons/react/solid'
 import dummy from "../../images/1.jpg"
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import JobDisplay from '../../Pages/JobDisplay';
 
 export default function JobCard(props) {
   return (
@@ -36,6 +39,10 @@ export default function JobCard(props) {
                 </li>
               </ul>
             </dd>
+          </div>
+
+          <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+            <dt className="text-sm font-medium text-gray-500"><Link to="/JobDisplay">View this job.</Link></dt>
           </div>
         </dl>
       </div>
