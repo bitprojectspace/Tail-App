@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
+import PastJob from '../components/PastJob/PastJob';
+import JobCard from '../components/JobCard/JobCard';
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';
@@ -82,7 +84,6 @@ export default function ContractorProfile() {
                 <div className="mt-1">
                   <textarea id="des" name="about" rows={5} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Our company specializes in..." defaultValue={''} />
                 </div>
-                <p className="mt-2 text-sm text-gray-500">Brief description for your profile. URLs are hyperlinked.</p>
               </div>
 
               {
@@ -159,10 +160,10 @@ export default function ContractorProfile() {
       <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
-            <h3 className="text-lg font-medium leading-6 text-gray-900">Past Jobs</h3>
+            <h3 className="text-lg font-medium leading-6 text-gray-900">Upload a demonstration of a previous job</h3>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Cover photo</label>
+            <label className="block text-sm font-medium text-gray-700">Previous Job</label>
             <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
               <div className="space-y-1 text-center">
                 <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
@@ -178,6 +179,30 @@ export default function ContractorProfile() {
                 <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
               </div>
             </div>
+            <div>
+              <label htmlFor="JobDescription" className="block text-sm font-medium text-gray-700">
+                Description
+              </label>
+              <div className="mt-1">
+                <textarea id="JobDescription" name="JobDescription" rows={5} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Explain what you have done in this job." defaultValue={''} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Upload
+        </button>
+      </div>
+      {
+        //Display past jobs
+      }
+      <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+        <div className="md:grid md:grid-cols-3 md:gap-6">
+          <div className="md:col-span-1">
+            <h3 className="text-lg font-medium leading-6 text-gray-900">Previous Jobs</h3>
+          </div>
+          <div className="block">
+            <PastJob />
           </div>
         </div>
       </div>
