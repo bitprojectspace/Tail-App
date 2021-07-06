@@ -9,8 +9,8 @@ class Upload extends React.Component {
     super(props)
     const src ={thumb}
     this.state = {
-      preview: null,
-      src
+      preview: null//,
+      //src
     }
     this.onCrop = this.onCrop.bind(this)
     this.onClose = this.onClose.bind(this)
@@ -34,7 +34,7 @@ class Upload extends React.Component {
           onClose={this.onClose}
           src={this.state.src}
         />
-        <img src={thumb} alt="Preview" />
+        <img src={this.state.preview} alt="Preview" />
       </div>
     )
   }
