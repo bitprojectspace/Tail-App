@@ -1,13 +1,19 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
+<<<<<<< HEAD
 import PastJob from '../components/PastJob/PastJob';
 import JobCard from '../components/JobCard/JobCard';
+=======
+import Rating from '../components/Rating/Rating';
+import Upload from './ImageDemo';
+>>>>>>> 211085fe76b91762f35f3f0194b90de8ca4eee98
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';
 //import awsconfig from './aws-exports';
 
 export default function ContractorProfile() {
+<<<<<<< HEAD
   return (
     //Wrapper Thing.
     <div className="space-y-6 w-full">
@@ -21,6 +27,28 @@ export default function ContractorProfile() {
             <h3 className="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
             <p className="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
           </div>
+=======
+return (
+//Wrapper Thing.
+<div className="space-y-6 w-full">
+  {
+  //Personal Information
+  }
+  <Navbar />
+  <Rating />
+  <Upload />
+  <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+    <div className="md:grid md:grid-cols-3 md:gap-6">
+      <div className="md:col-span-1">
+        <h3 className="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
+        <p className="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
+      </div>
+      <div className="mt-5 md:mt-0 md:col-span-2">
+        <form action="#" method="POST">
+          {
+          //The wrapper for the entire Profile sections items
+          }
+>>>>>>> 211085fe76b91762f35f3f0194b90de8ca4eee98
           <div className="mt-5 md:mt-0 md:col-span-2">
             <form action="#" method="POST">
               {
