@@ -1,12 +1,17 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PastJob from '../components/PastJob/PastJob';
 import JobCard from '../components/JobCard/JobCard';
 =======
 import Rating from '../components/Rating/Rating';
 import Upload from './ImageDemo';
 >>>>>>> 211085fe76b91762f35f3f0194b90de8ca4eee98
+=======
+import Rating from '../components/Rating/Rating';
+import Upload from './ImageDemo';
+>>>>>>> testbranch
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 //import Amplify from 'aws-amplify';

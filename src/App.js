@@ -9,7 +9,10 @@ import BrowseJobs from './Pages/BrowseJobs';
 import MakeQuote from './Pages/MakeQuote';
 import BrowseContractors from './Pages/BrowseContractors';
 import JobDisplay from './Pages/JobDisplay';
+<<<<<<< HEAD
 import CustProfileView from './Pages/CustProfileView';
+=======
+>>>>>>> testbranch
 //import PostJobs from './Pages/PostJobs';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -57,10 +60,13 @@ function App() {
         <Route exact path="/JobDisplay">
           <JobDisplay/>
         </Route>
+<<<<<<< HEAD
 
         <Route exact path="/CustProfileView">
           <CustProfileView/>
         </Route>
+=======
+>>>>>>> testbranch
         
       </Switch>
     </Router>
