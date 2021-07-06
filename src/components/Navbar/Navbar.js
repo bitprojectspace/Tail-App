@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import '../../../node_modules/materialize-css/dist/css/materialize.css';
 //import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'react-router-dom';
+//import logo from '../../images/theYOUCrewLogo.jpg'
+import TheLogo from '../../images/theYOUCrewLogo.jpg';
 //import App from '../../App';
 //import { extend } from 'jquery';
 //import Contact from '../Contact/Contact';
@@ -61,7 +63,7 @@ export default function Example() {
                   <li
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    <Link to="/ContractorProfile">Contractor Profile</Link>
+                    <Link to="/BrowseContractors">Browse Contractors</Link>
                   </li>
                   <li
                     className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
