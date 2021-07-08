@@ -4,6 +4,7 @@ import '../src/App.css'
 import Home from './Pages/Home';
 import CustProfile from './Pages/CustProfile';
 import ContractorProfile from './Pages/ContractorProfile';
+import ContractorProfileView from './Pages/ContractorProfileView';
 import Help from './Pages/Help';
 import BrowseJobs from './Pages/BrowseJobs';
 import MakeQuote from './Pages/MakeQuote';
@@ -16,7 +17,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //Imports for Amplify sign in and out.
 import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
-import {AmplifySignOut, withAuthenticator, AmplifySignIn} from '@aws-amplify/ui-react';
+import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
 
 
 Amplify.configure(awsconfig);
@@ -24,46 +25,50 @@ Amplify.configure(awsconfig);
 function App() {
   return (
     <div className="App">
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route exact path="/CustProfile">
-          <CustProfile />
-        </Route>
+          <Route exact path="/CustProfile">
+            <CustProfile />
+          </Route>
 
-        <Route exact path="/ContractorProfile">
-          <ContractorProfile/>
-        </Route>
+          <Route exact path="/ContractorProfile">
+            <ContractorProfile />
+          </Route>
 
-        <Route exact path="/Help">
-          <Help/>
-        </Route>
+          <Route exact path="/ContractorProfileView">
+            <ContractorProfileView />
+          </Route>
 
-        <Route exact path="/BrowseJobs">
-          <BrowseJobs/>
-        </Route>
+          <Route exact path="/Help">
+            <Help />
+          </Route>
 
-        <Route exact path="/MakeQuote">
-          <MakeQuote/>
-        </Route>
+          <Route exact path="/BrowseJobs">
+            <BrowseJobs />
+          </Route>
 
-        <Route exact path="/BrowseContractors">
-          <BrowseContractors/>
-        </Route>
+          <Route exact path="/MakeQuote">
+            <MakeQuote />
+          </Route>
 
-        <Route exact path="/JobDisplay">
-          <JobDisplay/>
-        </Route>
+          <Route exact path="/BrowseContractors">
+            <BrowseContractors />
+          </Route>
 
-        <Route exact path="/CustProfileView">
-          <CustProfileView/>
-        </Route>
-        
-      </Switch>
-    </Router>
+          <Route exact path="/JobDisplay">
+            <JobDisplay />
+          </Route>
+
+          <Route exact path="/CustProfileView">
+            <CustProfileView />
+          </Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }
