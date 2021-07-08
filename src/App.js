@@ -39,10 +39,6 @@ function App() {
             <ContractorProfile />
           </Route>
 
-          <Route exact path="/ContractorProfileView">
-            <ContractorProfileView />
-          </Route>
-
           <Route exact path="/Help">
             <Help />
           </Route>
@@ -65,6 +61,10 @@ function App() {
 
           <Route exact path="/CustProfileView">
             <CustProfileView />
+          </Route>
+
+          <Route exact path="/ContractorProfileView">
+            <ContractorProfileView />
           </Route>
 
         </Switch>
