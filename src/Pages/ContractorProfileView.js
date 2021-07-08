@@ -13,7 +13,7 @@ export default function CustProfile() {
         <div className="bg-white shadow overflow-hidden sm:rounded-lg">
          <Navbar/>
 
-         <img class="inline object-cover w-16 h-16 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+         <img class="inline object-cover w-25 h-25 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
         <div className="px-4 py-5 sm:px-6">
           <h3 className="text-lg leading-6 font-medium text-gray-900">Contractor Information</h3>
           <p className="mt-1 max-w-2xl text-sm text-gray-500">Information about this contractor</p>
@@ -40,7 +40,7 @@ export default function CustProfile() {
 
             <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
               <dt className="text-sm font-medium text-gray-500">Company Name</dt>
-              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Fake Comapny Ltd.</dd>
+              <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Fake Company Ltd.</dd>
             </div>
       
             <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -55,6 +55,10 @@ export default function CustProfile() {
             </div>
             
           </dl>
+
+          <button class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-4 px-8 rounded-full">
+              Button
+          </button>
         </div>
       </div>
     )
