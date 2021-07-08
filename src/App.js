@@ -11,6 +11,7 @@ import MakeQuote from './Pages/MakeQuote';
 import BrowseContractors from './Pages/BrowseContractors';
 import JobDisplay from './Pages/JobDisplay';
 import CustProfileView from './Pages/CustProfileView';
+import JobPosted from './Pages/JobPosted';
 //import PostJobs from './Pages/PostJobs';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -66,6 +67,11 @@ function App() {
           <Route exact path="/ContractorProfileView">
             <ContractorProfileView />
           </Route>
+
+          <Route exact path="/JobPosted">
+            <JobPosted />
+          </Route>
+
 
         </Switch>
       </Router>
