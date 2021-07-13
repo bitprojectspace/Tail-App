@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 //import History from '../components/History';
-//import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-//import Amplify from 'aws-amplify';
-//import awsconfig from './aws-exports';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
+import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
 
-export default function CustProfile() {
+function CustProfile() {
 return (
 //Wrapper Thing.
 <div className="space-y-6 w-full">
@@ -369,8 +369,10 @@ return (
       Save
     </button>
   </div>
+
+  <AmplifySignOut />
 </div>
 )
 }
 
-//export default withAuthenticator(App);</ /AmplifySignOut />
+export default withAuthenticator(CustProfile);
