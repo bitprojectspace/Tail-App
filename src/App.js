@@ -16,12 +16,12 @@ import JobPosted from './Pages/JobPosted';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //Imports for Amplify sign in and out.
-import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
-import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
+//import Amplify from 'aws-amplify';
+//import awsconfig from './aws-exports';
+//import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
 
 
-Amplify.configure(awsconfig);
+//Amplify.configure(awsconfig);
 
 function App() {
   return (
@@ -79,7 +79,7 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+export default App;
 
 {
   /**

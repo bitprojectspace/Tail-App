@@ -5,6 +5,8 @@ import Amplify from 'aws-amplify';
 import awsconfig from '../aws-exports';
 import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
 
+Amplify.configure(awsconfig);
+
 function CustProfile() {
 return (
 //Wrapper Thing.
