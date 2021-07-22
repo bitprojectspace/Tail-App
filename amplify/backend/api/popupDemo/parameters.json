@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "popupDemo",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcrewdemoe7ad802d",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -15,14 +15,35 @@ import CustProfileView from './Pages/CustProfileView';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 //Imports for Amplify sign in and out.
-import Amplify from 'aws-amplify';
 import awsconfig from './aws-exports';
 import { AmplifySignOut, withAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
+
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { listContractors } from './graphql/queries';
+import React, { useEffect, useState } from "react";
 
 
 Amplify.configure(awsconfig);
 
 function App() {
+
+  const [contractors, setContractors] = useState([]);
+
+  useEffect(() => {
+    fetchContractor()
+  }, []);
+
+  const fetchContractor = async () => {
+    try {
+      const contactorData = await API.graphql(graphqlOperation(listContractors));
+      const contractorList = contactorData.data.listContractors.items;
+      console.log('contractor list', contractorList);
+      setContractors(contractorList)
+    } catch (error) {
+      console.log('error on fetching contractor', error);
+    }
+  }
+
   return (
     <div className="App">
       <Router>

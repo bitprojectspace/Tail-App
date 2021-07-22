@@ -1,0 +1,15 @@
+type Contractor @model {
+  Contractorid: ID!
+  name: String!
+  description: String!
+  filePath: String!
+  address: String!
+  city: String!
+  email: String!
+  fullname: String!
+  phoneNumber: String!
+  postalCode: String!
+  province: String!
+  rating: String!
+  registrationDate: String!
+}
