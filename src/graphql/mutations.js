@@ -1,73 +1,43 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createContractor = /* GraphQL */ `
-  mutation CreateContractor(
-    $input: CreateContractorInput!
-    $condition: ModelContractorConditionInput
+export const createPopUp = /* GraphQL */ `
+  mutation CreatePopUp(
+    $input: CreatePopUpInput!
+    $condition: ModelPopUpConditionInput
   ) {
-    createContractor(input: $input, condition: $condition) {
+    createPopUp(input: $input, condition: $condition) {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
   }
 `;
-export const updateContractor = /* GraphQL */ `
-  mutation UpdateContractor(
-    $input: UpdateContractorInput!
-    $condition: ModelContractorConditionInput
+export const updatePopUp = /* GraphQL */ `
+  mutation UpdatePopUp(
+    $input: UpdatePopUpInput!
+    $condition: ModelPopUpConditionInput
   ) {
-    updateContractor(input: $input, condition: $condition) {
+    updatePopUp(input: $input, condition: $condition) {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
   }
 `;
-export const deleteContractor = /* GraphQL */ `
-  mutation DeleteContractor(
-    $input: DeleteContractorInput!
-    $condition: ModelContractorConditionInput
+export const deletePopUp = /* GraphQL */ `
+  mutation DeletePopUp(
+    $input: DeletePopUpInput!
+    $condition: ModelPopUpConditionInput
   ) {
-    deleteContractor(input: $input, condition: $condition) {
+    deletePopUp(input: $input, condition: $condition) {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }

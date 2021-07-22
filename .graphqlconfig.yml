@@ -1,6 +1,6 @@
 projects:
-  crewdemo:
-    schemaPath: amplify/backend/api/crewdemo/build/schema.graphql
+  popupDemo:
+    schemaPath: src/graphql/schema.json
     includes:
       - src/graphql/**/*.js
     excludes:
@@ -10,9 +10,6 @@ projects:
         codeGenTarget: javascript
         generatedFileName: ''
         docsFilePath: src/graphql
-        region: ca-central-1
-        apiId: null
-        maxDepth: 2
 extensions:
   amplify:
     version: 3

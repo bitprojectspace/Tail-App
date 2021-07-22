@@ -1,48 +1,28 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getContractor = /* GraphQL */ `
-  query GetContractor($id: ID!) {
-    getContractor(id: $id) {
+export const getPopUp = /* GraphQL */ `
+  query GetPopUp($id: ID!) {
+    getPopUp(id: $id) {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
   }
 `;
-export const listContractors = /* GraphQL */ `
-  query ListContractors(
-    $filter: ModelContractorFilterInput
+export const listPopUps = /* GraphQL */ `
+  query ListPopUps(
+    $filter: ModelPopUpFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listContractors(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPopUps(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
+        title
         description
-        filePath
-        address
-        city
-        email
-        fullname
-        phoneNumber
-        postalCode
-        province
-        rating
-        registrationDate
         createdAt
         updatedAt
       }

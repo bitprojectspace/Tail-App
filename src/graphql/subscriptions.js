@@ -1,64 +1,34 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateContractor = /* GraphQL */ `
-  subscription OnCreateContractor {
-    onCreateContractor {
+export const onCreatePopUp = /* GraphQL */ `
+  subscription OnCreatePopUp {
+    onCreatePopUp {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
   }
 `;
-export const onUpdateContractor = /* GraphQL */ `
-  subscription OnUpdateContractor {
-    onUpdateContractor {
+export const onUpdatePopUp = /* GraphQL */ `
+  subscription OnUpdatePopUp {
+    onUpdatePopUp {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
   }
 `;
-export const onDeleteContractor = /* GraphQL */ `
-  subscription OnDeleteContractor {
-    onDeleteContractor {
+export const onDeletePopUp = /* GraphQL */ `
+  subscription OnDeletePopUp {
+    onDeletePopUp {
       id
-      name
+      title
       description
-      filePath
-      address
-      city
-      email
-      fullname
-      phoneNumber
-      postalCode
-      province
-      rating
-      registrationDate
       createdAt
       updatedAt
     }
