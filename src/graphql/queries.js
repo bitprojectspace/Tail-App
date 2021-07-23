@@ -30,3 +30,48 @@ export const listPopUps = /* GraphQL */ `
     }
   }
 `;
+export const getContractor = /* GraphQL */ `
+  query GetContractor($id: ID!) {
+    getContractor(id: $id) {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listContractors = /* GraphQL */ `
+  query ListContractors(
+    $filter: ModelContractorFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listContractors(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        contractorID
+        fullName
+        address
+        city
+        province
+        postalCode
+        phoneNumber
+        rating
+        registrationDate
+        email
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

@@ -3,3 +3,16 @@ type PopUp @model {
   title: String!
   description: String!
 }
+
+type Contractor @model {
+   contractorID: ID!
+   fullName: String!
+   address: String!
+   city: String!
+   province: String!
+   postalCode: String!
+   phoneNumber: String!
+   rating: String!
+   registrationDate: AWSDate!
+   email:String!
+}

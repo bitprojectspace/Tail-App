@@ -34,3 +34,60 @@ export const onDeletePopUp = /* GraphQL */ `
     }
   }
 `;
+export const onCreateContractor = /* GraphQL */ `
+  subscription OnCreateContractor {
+    onCreateContractor {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateContractor = /* GraphQL */ `
+  subscription OnUpdateContractor {
+    onUpdateContractor {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteContractor = /* GraphQL */ `
+  subscription OnDeleteContractor {
+    onDeleteContractor {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;

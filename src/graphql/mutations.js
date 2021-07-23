@@ -43,3 +43,69 @@ export const deletePopUp = /* GraphQL */ `
     }
   }
 `;
+export const createContractor = /* GraphQL */ `
+  mutation CreateContractor(
+    $input: CreateContractorInput!
+    $condition: ModelContractorConditionInput
+  ) {
+    createContractor(input: $input, condition: $condition) {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateContractor = /* GraphQL */ `
+  mutation UpdateContractor(
+    $input: UpdateContractorInput!
+    $condition: ModelContractorConditionInput
+  ) {
+    updateContractor(input: $input, condition: $condition) {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteContractor = /* GraphQL */ `
+  mutation DeleteContractor(
+    $input: DeleteContractorInput!
+    $condition: ModelContractorConditionInput
+  ) {
+    deleteContractor(input: $input, condition: $condition) {
+      id
+      contractorID
+      fullName
+      address
+      city
+      province
+      postalCode
+      phoneNumber
+      rating
+      registrationDate
+      email
+      createdAt
+      updatedAt
+    }
+  }
+`;
