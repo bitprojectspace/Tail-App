@@ -5,7 +5,7 @@ type PopUp @model {
 }
 
 type Contractor @model {
-   contractorID: ID!
+   id: ID!
    fullName: String!
    address: String!
    city: String!
@@ -16,3 +16,19 @@ type Contractor @model {
    registrationDate: AWSDate!
    email:String!
 }
+
+{
+   "id": "123",
+   "fullName": "Mike Wazawski",
+   "address": "123 Monster street",
+   "city": "Block city",
+   "province": "Block province",
+   "postalCode": "123 ABC",
+   "phoneNumber": "123456789",
+   "rating": "4",
+   "registrationDate":"2021-07-26T14:03:24.203Z",
+   "email":"Mike@monstersinc.com",
+   "createdAt":"2021-07-26T14:03:24.203Z",
+   "updatedAt":"2021-07-26T14:03:24.203Z"
+}
+

@@ -38,7 +38,6 @@ export const onCreateContractor = /* GraphQL */ `
   subscription OnCreateContractor {
     onCreateContractor {
       id
-      contractorID
       fullName
       address
       city
@@ -57,7 +56,6 @@ export const onUpdateContractor = /* GraphQL */ `
   subscription OnUpdateContractor {
     onUpdateContractor {
       id
-      contractorID
       fullName
       address
       city
@@ -76,7 +74,6 @@ export const onDeleteContractor = /* GraphQL */ `
   subscription OnDeleteContractor {
     onDeleteContractor {
       id
-      contractorID
       fullName
       address
       city

@@ -26,16 +26,14 @@ export default function BrowseContractors () {
 
        catch(error) 
        {
-
+          console.log("There was an error fetching contractors",error);
        }
     }
 
     return (
         <div className="bg-Gray">
         <Navbar />
-        <div className="flex flex-col h-full items-center">
-          
-        </div>    
+          <div className="flex flex-col h-full items-center"></div>    
       </div>
     )
 }

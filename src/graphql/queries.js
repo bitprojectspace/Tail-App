@@ -34,7 +34,6 @@ export const getContractor = /* GraphQL */ `
   query GetContractor($id: ID!) {
     getContractor(id: $id) {
       id
-      contractorID
       fullName
       address
       city
@@ -58,7 +57,6 @@ export const listContractors = /* GraphQL */ `
     listContractors(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        contractorID
         fullName
         address
         city

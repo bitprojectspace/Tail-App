@@ -50,7 +50,6 @@ export const createContractor = /* GraphQL */ `
   ) {
     createContractor(input: $input, condition: $condition) {
       id
-      contractorID
       fullName
       address
       city
@@ -72,7 +71,6 @@ export const updateContractor = /* GraphQL */ `
   ) {
     updateContractor(input: $input, condition: $condition) {
       id
-      contractorID
       fullName
       address
       city
@@ -94,7 +92,6 @@ export const deleteContractor = /* GraphQL */ `
   ) {
     deleteContractor(input: $input, condition: $condition) {
       id
-      contractorID
       fullName
       address
       city
