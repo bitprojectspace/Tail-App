@@ -7,8 +7,8 @@ import { PaperClipIcon } from '@heroicons/react/solid';
 //import JobHistoryCard from '../components/JobHistoryCard/JobHistoryCard';
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-//import Amplify from 'aws-amplify';
-//import awsconfig from './aws-exports';
+import Amplify from 'aws-amplify';
+import awsconfig from '../aws-exports';
 
 export default function CustProfile() {
   return (

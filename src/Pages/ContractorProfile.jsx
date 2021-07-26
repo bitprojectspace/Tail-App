@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import PastJob from '../components/PastJob/PastJob';
 import JobCard from '../components/JobCard/JobCard';
@@ -6,7 +6,8 @@ import Rating from '../components/Rating/Rating';
 import Upload from './ImageDemo';
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-//import Amplify from 'aws-amplify';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { listContractors } from '../graphql/queries';
 //import awsconfig from './aws-exports';
 
 export default function ContractorProfile() {
