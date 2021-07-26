@@ -40,6 +40,7 @@ export default function Adventure() {
           <h4 className="center">
             <span className="purple-text darken-1">Reviewing</span>
           </h4>
+
           <div className="col s12 m4">
             <div className="card">
               <div className="card-image">
