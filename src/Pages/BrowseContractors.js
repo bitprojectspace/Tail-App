@@ -33,10 +33,8 @@ export default function BrowseContractors () {
     }
 
     return (
-        <div className="bg-Gray">
-        <Navbar />
-          <div className="flex flex-col h-full items-center">
-             <div className = "contractors">
+             <div className = "contractors" >
+                 <Navbar />
                 {contractors.map(contractor => {
                    return (
                      <div className="bg-white shadow overflow-hidden sm:rounded-lg w-4/12 mx-0 my-1">
@@ -92,7 +90,5 @@ export default function BrowseContractors () {
                    )
                 })}
              </div>
-          </div>    
-      </div>
     )
 }
