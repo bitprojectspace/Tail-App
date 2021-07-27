@@ -17,5 +17,13 @@ type Contractor @model {
    email:String!
 }
 
-
+type Job @model {
+   id:ID!
+   title:String!
+   location:String!
+   status:String!
+   type:String!
+   description:String!
+   date:String!
+}
 
