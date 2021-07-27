@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import PastJob from '../components/PastJob/PastJob';
-//import Upload from './ImageDemo';
 import Rating from '../components/Rating/Rating';
 import { PaperClipIcon } from '@heroicons/react/solid';
 //import JobHistoryCard from '../components/JobHistoryCard/JobHistoryCard';
@@ -10,7 +9,6 @@ import { PaperClipIcon } from '@heroicons/react/solid';
 import { useState, useEffect } from 'react';
 import { listContractors } from '../graphql/queries';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
-
 export default function CustProfile() {
   const [contractors, setContractors] = useState([]);
 
