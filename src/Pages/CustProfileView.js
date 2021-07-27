@@ -8,7 +8,29 @@ import JobHistoryCard from '../components/JobHistoryCard/JobHistoryCard';
 //import Amplify from 'aws-amplify';
 //import awsconfig from './aws-exports';
 
+import { useState, useEffect } from 'react';
+import { listContractors } from '../graphql/queries';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+
 export default function CustProfile() {
+  const [contractors, setContractors] = useState([]);
+
+  useEffect(() => {
+    fetchContractors();
+  }, []);
+
+  const fetchContractors = async () => {
+    try {
+      const contractorData = await API.graphql(graphqlOperation(listContractors));
+      const contractorList = contractorData.data.listContractors.items;
+      console.log('contractor list', contractorList);
+      setContractors(contractorList);
+    }
+
+    catch (error) {
+      console.log("There was an error fetching contractors", error);
+    }
+  }
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-lg">
       <Navbar />
