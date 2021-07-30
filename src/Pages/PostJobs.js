@@ -5,9 +5,6 @@ export default function PostJobs() {
     return (
         <form className="space-y-8 divide-y divide-gray-200">
             <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
-            <Navbar/>
-
-            <h2>Post a Job</h2>
             
             <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
