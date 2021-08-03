@@ -13,8 +13,6 @@ import { listJobs } from "../graphql/queries";
 import Amplify, { API, graphqlOperation } from "aws-amplify";
 
 export default function BrowseJobs() {
-  //const jobsComponents = JobsData.map(job => <JobCard key={job.id} title={job.title} location={job.location} budget={job.budget} desc={job.desc} /> )
-
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
@@ -100,11 +98,3 @@ export default function BrowseJobs() {
     </div>
   );
 }
-
-/*
-export default function JobCard(props) {
-  return (
-
-  )
-}
-*/
