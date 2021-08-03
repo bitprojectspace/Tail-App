@@ -26,24 +26,6 @@ import React, { useEffect, useState } from "react";
 Amplify.configure(awsconfig);
 
 function App() {
-
-  const [contractors, setContractors] = useState([]);
-
-  useEffect(() => {
-    fetchContractor()
-  }, []);
-
-  const fetchContractor = async () => {
-    try {
-      const contactorData = await API.graphql(graphqlOperation(listContractors));
-      const contractorList = contactorData.data.listContractors.items;
-      console.log('contractor list', contractorList);
-      setContractors(contractorList)
-    } catch (error) {
-      console.log('error on fetching contractor', error);
-    }
-  }
-
   return (
     <div className="App">
       <Router>

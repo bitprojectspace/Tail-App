@@ -1,19 +1,60 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import PastJob from '../components/PastJob/PastJob';
 import JobCard from '../components/JobCard/JobCard';
 import Rating from '../components/Rating/Rating';
 //import Upload from './ImageDemo';
 //import History from '../components/History';
-//import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
+import { useState, useEffect } from 'react';
 import { listContractors } from '../graphql/queries';
+import {updateContractors}  from '../graphql/mutations';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+//import { render } from '@headlessui/react/dist/utils/render';
 //import awsconfig from './aws-exports';
 
 export default function ContractorProfile() {
+
+  const [contractors, setContractors] = useState([]);
+
+  useEffect(() => {
+    fetchContractors();
+  }, []);
+
+  const fetchContractors = async () => {
+    try {
+      const contractorData = await API.graphql(graphqlOperation(listContractors));
+      const contractorList = contractorData.data.listContractors.items;
+      console.log('contractor list', contractorList);
+      setContractors(contractorList);
+    }
+
+    catch (error) {
+      console.log("There was an error fetching contractors", error);
+    }
+  }
+  
+    const updateContractors = async (idx) => {
+      try {
+
+        const contractor = contractors[idx];
+        contractor.fullName = this.state.fullName;
+        console.log('contractor list', contractorList);
+
+        const contractorData = await API.graphql(graphqlOperation(updateContractors, {input: contractor}));
+        const contractorList = [...contractors];
+        contractorList[idx] = contractorData.data.updateContractor;
+        setContractors(contractorList);
+      }
+  
+      catch (error) {
+        console.log("Error updating contractor", error);
+      }
+    }
+    {contractors.map((contractor, idx) => {
   return (
     //Wrapper Thing.
-    <div className="space-y-6 w-full">
+    <div className="space-y-6 w-full" key={`contractor${idx}`}>
       {
         //Personal Information
       }
@@ -37,7 +78,7 @@ export default function ContractorProfile() {
                     //The wrapper for the entire Profile sections items
                   }
                   <div className="mt-5 md:mt-0 md:col-span-2">
-                    <form className="space-y-6" action="#" method="POST">
+                    <form className="space-y-6" action="#" method="POST" onSubmit={this.updateContractors(idx)}>
 
                       {
                         //Avatar Photo
@@ -81,6 +122,7 @@ export default function ContractorProfile() {
                   </div>
 
                   <div className="col-span-6 sm:col-span-4">
+                  
                     <label htmlFor="company_name" className="block text-sm font-medium text-gray-700">
                       Company Name
                     </label>
@@ -309,7 +351,9 @@ export default function ContractorProfile() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
-//export default withAuthenticator(App);</ /AmplifySignOut />
+)
+}
+}
+//export default withAuthenticator(ContractorProfile);
