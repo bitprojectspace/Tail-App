@@ -9,8 +9,7 @@
       "UnauthRoleName": "amplify-crewdemo-dev-183532-unauthRole",
       "StackName": "amplify-crewdemo-dev-183532",
       "StackId": "arn:aws:cloudformation:ca-central-1:238053444266:stack/amplify-crewdemo-dev-183532/8cc5d2a0-cefb-11eb-a9e5-0ad744ca2e1c",
-      "AmplifyAppId": "djvbfr0i7xo9r",
-      "AuthTriggerTemplateURL": ""
+      "AmplifyAppId": "djvbfr0i7xo9r"
     },
     "categories": {
       "auth": {
