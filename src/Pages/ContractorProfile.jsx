@@ -1,11 +1,13 @@
-import React from "react";
-import Navbar from "../components/Navbar/Navbar";
-import PastJob from "../components/PastJob/PastJob";
-import Rating from "../components/Rating/Rating";
-import Upload from "./ImageDemo";
+import React, { useEffect } from 'react';
+import Navbar from '../components/Navbar/Navbar'
+import PastJob from '../components/PastJob/PastJob';
+import JobCard from '../components/JobCard/JobCard';
+import Rating from '../components/Rating/Rating';
+//import Upload from './ImageDemo';
 //import History from '../components/History';
 //import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
-//import Amplify from 'aws-amplify';
+import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { listContractors } from '../graphql/queries';
 //import awsconfig from './aws-exports';
 
 export default function ContractorProfile() {
@@ -17,7 +19,7 @@ export default function ContractorProfile() {
       }
       <Navbar />
       <Rating />
-      <Upload />
+
       <div className="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1">
