@@ -243,7 +243,7 @@ function CustProfile() {
             </p>
           </div>
           {
-            //The wrapper for the entire Profile sections items
+            //This is where we post a job.
           }
           <PostJobs/>
          </div>
