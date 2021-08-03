@@ -5,25 +5,24 @@ type PopUp @model {
 }
 
 type Contractor @model {
-   id: ID!
-   fullName: String!
-   address: String!
-   city: String!
-   province: String!
-   postalCode: String!
-   phoneNumber: String!
-   rating: String!
-   registrationDate: String!
-   email:String!
+  id: ID!
+  fullName: String!
+  address: String!
+  city: String!
+  province: String!
+  postalCode: String!
+  phoneNumber: String!
+  rating: String!
+  registrationDate: String!
+  email: String!
 }
 
 type Job @model {
-   id:ID!
-   title:String!
-   location:String!
-   status:String!
-   type:String!
-   description:String!
-   date:String!
+  id: ID!
+  title: String!
+  location: String!
+  status: String!
+  type: String!
+  description: String!
+  date: String!
 }
-

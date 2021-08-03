@@ -88,3 +88,48 @@ export const onDeleteContractor = /* GraphQL */ `
     }
   }
 `;
+export const onCreateJob = /* GraphQL */ `
+  subscription OnCreateJob {
+    onCreateJob {
+      id
+      title
+      location
+      status
+      type
+      description
+      date
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateJob = /* GraphQL */ `
+  subscription OnUpdateJob {
+    onUpdateJob {
+      id
+      title
+      location
+      status
+      type
+      description
+      date
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteJob = /* GraphQL */ `
+  subscription OnDeleteJob {
+    onDeleteJob {
+      id
+      title
+      location
+      status
+      type
+      description
+      date
+      createdAt
+      updatedAt
+    }
+  }
+`;
