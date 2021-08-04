@@ -1,10 +1,18 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
+import {useState, useEffect} from 'react';
 
-export default function PostJobs() {
+export default function PostJobs({onUpload}) {
+
+   const [jobData,setJobData] = useState({});
+
+   const uploadJob = async() => {
+      console.log('jobData',jobData);
+      const {title,description,location,status,type} = jobData;
+      onUpload(); 
+   };
 
     return (
-        <form className="space-y-8 divide-y divide-gray-200">
             <div className="space-y-8 divide-y divide-gray-200 sm:space-y-5">
             
             <div className="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
@@ -18,6 +26,8 @@ export default function PostJobs() {
                     type="text"
                     name="title"
                     id="title"
+                    value={jobData.title}
+                    onChange={e => setJobData({ ...jobData, title: e.target.value })}
                     className="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300"
                   />
                 </div>
@@ -35,6 +45,8 @@ export default function PostJobs() {
                   id="about"
                   name="about"
                   rows={3}
+                  value={jobData.description}
+                  onChange={e => setJobData({ ...jobData, description: e.target.value })}
                   className="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"
                   defaultValue={''}
                 />
@@ -42,69 +54,63 @@ export default function PostJobs() {
             </div>
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="city" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                City
+              <label htmlFor="location" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Location
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <input
                   type="text"
-                  name="city"
-                  id="city"
+                  name="location"
+                  id="location"
+                  value={jobData.location}
+                  onChange={e => setJobData({ ...jobData, location: e.target.value })}
                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
             </div>
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="state" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                State / Province
+              <label htmlFor="status" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Status
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
                 <input
                   type="text"
-                  name="state"
-                  id="state"
+                  name="status"
+                  id="status"
+                  value={jobData.status}
+                  onChange={e => setJobData({ ...jobData, status: e.target.value })}
                   className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
                 />
               </div>
             </div>
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-              <label htmlFor="urgency" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                Urgency
+              <label htmlFor="type" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Type
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
-                <select
-                  id="urgency"
-                  name="urgency"
-                  className="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
-                >
-                  <option>Urgent</option>
-                  <option>Actively looking</option>
-                  <option>Just Browsing</option>
-                </select>
+                <input
+                  type="text"
+                  name="type"
+                  id="type"
+                  value={jobData.type}
+                  onChange={e => setJobData({ ...jobData, type: e.target.value })}
+                  className="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md"
+                />
               </div>
             </div>
 
-            <div>
-                <label className="block text-sm font-medium text-gray-700">Cover photo</label>
-                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                  <div className="space-y-1 text-center">
-                    <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                      <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    <div className="flex text-sm text-gray-600">
-                      <label htmlFor="file-upload" className="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <span>Upload a file</span>
-                        <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                      </label>
-                      <p className="pl-1">or drag and drop</p>
-                    </div>
-                    <p className="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-                  </div>
-                </div>
-              </div>
-          
+            <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+              <label htmlFor="type" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                Image upload
+              </label>
+              <div className="mt-1 sm:mt-0 sm:col-span-2">
+            <input type="file" accept="image/png, image/jpeg" onChange={e => setJobData(e.target.files[0])} />
+            </div>
+            </div>
+           
+
               <div className="pt-5">
         <div className="flex justify-end">
           <button
@@ -115,6 +121,7 @@ export default function PostJobs() {
           </button>
           <button
             type="submit"
+            onClick = {uploadJob}
             className="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Save
@@ -123,6 +130,5 @@ export default function PostJobs() {
       </div>
 
         </div>
-        </form>
     )
 }
