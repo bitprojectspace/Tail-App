@@ -1,15 +1,31 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar'
 import {useState, useEffect} from 'react';
+import { v4 as uuid } from 'uuid';
+import { updateJob, createJob} from '../graphql/mutations';
+import { API, graphqlOperation } from 'aws-amplify';
 
-export default function PostJobs({onUpload}) {
+export default function PostJobs() {
 
    const [jobData,setJobData] = useState({});
+   const [data,setData] = useState();
 
    const uploadJob = async() => {
       console.log('jobData',jobData);
       const {title,description,location,status,type} = jobData;
-      onUpload(); 
+
+      const { key } = await Storage.put(`${uuid()}.jpg`, data, { contentType: 'image/jpeg' });
+
+      const createJobInput = {
+        id: uuid(),
+        title,
+        description,
+        location,
+        status,
+        type,
+        filePath: key
+    };
+    await API.graphql(graphqlOperation(createJob, { input: createJobInput }));
    };
 
     return (
@@ -106,8 +122,8 @@ export default function PostJobs({onUpload}) {
                 Image upload
               </label>
               <div className="mt-1 sm:mt-0 sm:col-span-2">
-            <input type="file" accept="image/png, image/jpeg" onChange={e => setJobData(e.target.files[0])} />
-            </div>
+                  <input type="file" accept="image/png, image/jpeg" onChange={e => setJobData(e.target.files[0])} />
+              </div>
             </div>
            
 
