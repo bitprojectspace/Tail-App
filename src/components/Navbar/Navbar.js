@@ -1,19 +1,19 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
-import React, { Component } from 'react';
-import '../../../node_modules/materialize-css/dist/css/materialize.css';
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import React, { Component } from "react";
+import "../../../node_modules/materialize-css/dist/css/materialize.css";
 //import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 //import logo from '../../images/theYOUCrewLogo.jpg'
-import TheLogo from '../../images/theYOUCrewLogo.jpg';
+import logo from "../../images/True.svg";
 //import App from '../../App';
 //import { extend } from 'jquery';
 //import Contact from '../Contact/Contact';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function Example() {
@@ -43,31 +43,25 @@ export default function Example() {
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                    src={logo} //"https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"
+                    height="180px"
+                    style="height: 160px"
                   />
                 </div>
                 <ul className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  
-                  <li
-                    className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
+
+                  <li className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link to="/">Home</Link>
                   </li>
-                  <li
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
+                  <li className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link to="/CustProfile">Customer Profile</Link>
                   </li>
-                  <li
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
+                  <li className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link to="/BrowseContractors">Browse Contractors</Link>
                   </li>
-                  <li
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                  >
+                  <li className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                     <Link to="/Help">Help</Link>
                   </li>
                 </ul>
@@ -111,8 +105,8 @@ export default function Example() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Your Profile
@@ -124,8 +118,8 @@ export default function Example() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Settings
@@ -137,8 +131,8 @@ export default function Example() {
                               <a
                                 href="#"
                                 className={classNames(
-                                  active ? 'bg-gray-100' : '',
-                                  'block px-4 py-2 text-sm text-gray-700'
+                                  active ? "bg-gray-100" : "",
+                                  "block px-4 py-2 text-sm text-gray-700"
                                 )}
                               >
                                 Sign out
@@ -186,5 +180,5 @@ export default function Example() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
