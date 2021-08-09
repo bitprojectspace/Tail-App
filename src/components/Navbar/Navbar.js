@@ -42,11 +42,9 @@ export default function Example() {
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden lg:block h-40 w-auto"
                     src={logo} //"https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"
-                    height="180px"
-                    style="height: 160px"
                   />
                 </div>
                 <ul className="hidden sm:ml-6 sm:flex sm:space-x-8">
