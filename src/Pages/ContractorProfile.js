@@ -8,7 +8,7 @@ import Rating from '../components/Rating/Rating';
 import {AmplifySignOut, withAuthenticator} from '@aws-amplify/ui-react';
 import { useState, useEffect } from 'react';
 import { listContractors } from '../graphql/queries';
-import {updateContractors}  from '../graphql/mutations';
+import {updateContractor}  from '../graphql/mutations';
 import Amplify, { API, graphqlOperation } from 'aws-amplify';
 //import { render } from '@headlessui/react/dist/utils/render';
 //import awsconfig from './aws-exports';
@@ -23,7 +23,6 @@ export default function ContractorProfile() {
 
   const fetchContractors = async () => {
     try {
-      alert("fetched");
       const contractorData = await API.graphql(graphqlOperation(listContractors));
       const contractorList = contractorData.data.listContractors.items;
       console.log('contractor list', contractorList);
@@ -37,15 +36,22 @@ export default function ContractorProfile() {
 
   const updateContractors = async (idx) => {
     try {
-      alert("method passed");
+      alert("updated");
       fetchContractors();
       const contractor = contractors[idx];
-      contractor.fullName = "test";
+      contractor.fullName = document.getElementById("company_name").value;
+      contractor.email = document.getElementById("email_address").value;
+      contractor.address = document.getElementById("street_address").value;
+      contractor.city = document.getElementById("city").value;
+      contractor.postalCode = document.getElementById("postal_code").value;
+      contractor.province = document.getElementById("state").value;
+
       delete contractor.createdAt;
       delete contractor.updatedAt;
-      console.log('contractor list', contractorList);
 
-      const contractorData = await API.graphql(graphqlOperation(updateContractors, {input: contractor}));
+
+      const contractorData = await API.graphql(graphqlOperation(updateContractor, {input: contractor }));
+
       const contractorList = [...contractors];
       contractorList[idx] = contractorData.data.updateContractor;
       setContractors(contractorList);
