@@ -4,13 +4,8 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import React, { Component } from "react";
 import "../../../node_modules/materialize-css/dist/css/materialize.css";
-//import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from "react-router-dom";
-//import logo from '../../images/theYOUCrewLogo.jpg'
 import logo from "../../images/True.svg";
-//import App from '../../App';
-//import { extend } from 'jquery';
-//import Contact from '../Contact/Contact';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -43,7 +38,7 @@ export default function Example() {
                   />
                   <img
                     className="hidden lg:block h-40 w-auto"
-                    src={logo} //"https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                    src={logo}
                     alt="Workflow"
                   />
                 </div>
