@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar/Navbar'
 import {useState, useEffect} from 'react';
 import { v4 as uuid } from 'uuid';
 import { updateJob, createJob} from '../graphql/mutations';
-import { API, graphqlOperation } from 'aws-amplify';
+import { API, graphqlOperation,Storage } from 'aws-amplify';
 
 export default function PostJobs() {
 

@@ -5,24 +5,24 @@ import Navbar from '../components/Navbar/Navbar'
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Why did the scarecrow got an award?",
     answer:
-      "I don't know, but the flag is a big plus.",
+      "Because he was outstanding in his field.",
   },
   {
-    question: "How do you make holy water?",
+    question: "What did the US flag say to the Canadian flag?",
     answer:
-      "You boil the hell out of it.",
+      "Nothing they just waved. ahh freedom.",
   },
   {
-    question: "Why did the invisible man turn down the job offer?",
+    question: "Where are dad jokes stored?",
     answer:
-      "He couldn't see himself doing it.",
+      "In a dad-a-base",
   },
   {
-    question: "Why can't you hear a pterodactyl go to the bathroom?",
+    question: "Can February march?",
     answer:
-      "Because the pee is silent.",
+      "No but April may.",
   },
   // More questions...
 ]
