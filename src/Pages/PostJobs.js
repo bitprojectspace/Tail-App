@@ -8,6 +8,7 @@ import { API, graphqlOperation,Storage } from 'aws-amplify';
 export default function PostJobs() {
 
    const [jobData,setJobData] = useState({});
+   
    const [data,setData] = useState();
 
    const uploadJob = async() => {
